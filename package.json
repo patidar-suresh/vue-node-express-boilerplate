@@ -1,0 +1,26 @@
+{
+  "name": "vue-node-express-boilerplate",
+  "version": "1.0.0",
+  "description": "A fullstack project built with vue, node and express all in Typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patidar-suresh/vue-node-express-boilerplate.git"
+  },
+  "keywords": [
+    "vue",
+    "typescript",
+    "nodejs",
+    "express",
+    "boilerplate"
+  ],
+  "author": "Suresh Patidar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/patidar-suresh/vue-node-express-boilerplate/issues"
+  },
+  "homepage": "https://github.com/patidar-suresh/vue-node-express-boilerplate#readme"
+}
