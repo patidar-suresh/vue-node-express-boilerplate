@@ -4,7 +4,14 @@
   "description": "A fullstack project built with vue, node and express all in Typescript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install:server": "cd server && npm install",
+    "install:client": "cd client && npm install",
+    "preinstall": "npm run install:server && npm run install:client",
+    "build:client": "cd client && npm run build",
+    "build:server": "cd server && npm run build",
+    "prebuild": "npm run build:client && npm run build:server",
+    "build": "copyfiles -u 2 ./server/dist/**/*.* ./server/build && copyfiles -u 2 ./client/dist/**/*.* ./server/build/public",
+    "server": "npm run build && cd server && set PORT=3002&&node ./build/."
   },
   "repository": {
     "type": "git",
@@ -22,5 +29,8 @@
   "bugs": {
     "url": "https://github.com/patidar-suresh/vue-node-express-boilerplate/issues"
   },
-  "homepage": "https://github.com/patidar-suresh/vue-node-express-boilerplate#readme"
+  "homepage": "https://github.com/patidar-suresh/vue-node-express-boilerplate#readme",
+  "devDependencies": {
+    "copyfiles": "^2.1.0"
+  }
 }
